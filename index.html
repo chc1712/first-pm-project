@@ -1755,31 +1755,12 @@ function updAll(){
   <div class="sec-tag">05 · 個人反思與學習心得</div>
   <h2 class="sec-title">反思</h2>
   <div class="body">
-    <p>在這個分析專案中，我最大的收穫是學會了「<strong>不斷地進行反思與拆解</strong>」。在分析過程中，即使數據呈現了非常直觀的結果，我依然會強迫自己停下來思考：這背後是否隱藏了其他的商業邏輯？</p>
-    <p>例如，當我看到中部地區的高折扣時，我並沒有直接將其定義為「錯誤」，而是先提出了一個合理的假設：「這是否是為了搶佔大訂單的戰略性折扣？」透過進一步的數據求證，我發現大訂單的折扣反而更低，這才最終確認了這是一個管理失控的問題。這種「假設—驗證—修正」的循環，讓我對數據分析的嚴謹性有了更深的體會。</p>
-    <p>此外，我也意識到，發現問題只是第一步，<strong>如何制定可行的方案並進行優先級排序（如 RICE 框架的應用）</strong>，是產品經理更核心的價值所在。這也是我未來會持續鑽研與學習的目標。</p>
+    <p>這個分析有兩個值得記錄的方法論時刻。</p>
+    <p>第一是假設驗證的重要性。在看到 Central 的高折扣和低利潤率並存時，直觀的猜測是「業務在用折扣換大單」。但把這個假設拿去驗證後，數據清楚顯示：Central 的大單（≥$500）折扣反而更低（18.18% vs 26.63%），且獲利顯著（+$150/單）；高折扣集中在小額訂單，不是在對大客戶讓利。如果跳過驗證直接建議「讓折扣策略更精準」，會完全走錯方向。</p>
+    <p>第二是根本原因存在著三層結構。折扣失控表面上看是執行問題，但深挖後發現它同時反映了三個不同層次的問題：獲客策略（新客折扣過高）、品類激勵（低價品項折扣浪費）、授權監控（城市層級管理黑洞）。這三個問題狀況需要三種不同性質的介入，不能用一個政策解決。</p>
   </div>
 
-  <div class="note">
-    <div class="note-lbl">核心觀點</div>
-    「數據告訴我們『發生了什麼』，但 PM 的價值在於找出『為什麼發生』並決定『該怎麼辦』。這份報告不僅是數據的整理，更是對業務邏輯的深度重構。」
-  </div>
 
-  <div class="note gray" style="margin-top:12px">
-    <div class="note-lbl">使用工具</div>
-    互動式三分頁儀表板（Overview · Profit Diagnostics · Customer &amp; Product Insights）以及完整 PM 診斷報告。儀表板支援跨圖表聯動篩選，針對 Wix HTML 組件 sandbox 限制進行了相容性處理（動態載入 D3.js、Canvas 手繪圖表、gzip 資料內嵌）。
-  </div>
-
-  <div class="tags">
-    <span class="tag">Python · pandas</span>
-    <span class="tag">Tableau</span>
-    <span class="tag">D3.js · TopoJSON</span>
-    <span class="tag">Canvas API</span>
-    <span class="tag">HTML / CSS / JS</span>
-    <span class="tag">AI Collaboration (Claude)</span>
-    <span class="tag">PM Diagnostic Framework</span>
-    <span class="tag">RICE Prioritization</span>
-  </div>
 </section>
 
 <footer>
