@@ -138,7 +138,7 @@ nav{border-bottom:1px solid var(--border);padding:14px 28px;display:flex;align-i
 .actions{margin:18px 0}
 .action{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--border)}
 .action:last-child{border-bottom:none}
-.p-tag{font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.06em;padding:3px 8px;border-radius:2px;height:fit-content;flex-shrink:0;margin-top:2px;font-weight:500}
+.p-tag,.action-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.04em;padding:2px 7px;border-radius:2px;height:fit-content;flex-shrink:0;margin-top:3px;font-weight:500;white-space:nowrap;min-width:76px;text-align:center}
 .p0{background:#fdecea;color:var(--red)}
 .p1{background:#fdf4e7;color:var(--amber)}
 .p2{background:var(--bg2);color:var(--ink3)}
@@ -1716,14 +1716,14 @@ function updAll(){
   </div>
 
   <div class="action-list" style="margin-top:20px">
-    <div class="action"><span class="action-tag p0">P0 第3週</span><div class="action-txt"><strong>折扣 &gt;40% 需 VP 特批（全公司）：</strong>RICE 59,476 · 年化可挽回 +$18,504。受影響虧損訂單 $26,434 × 70% 攔截率。</div></div>
-    <div class="action"><span class="action-tag p0">P0 第3週</span><div class="action-txt"><strong>凍結 Tables / Bookcases 折扣授權：</strong>RICE 39,868 · 年化可挽回 +$8,197。折扣節省 $16,393 × 50% 轉為實際利潤改善。</div></div>
-    <div class="action"><span class="action-tag p0">P0 第3週</span><div class="action-txt"><strong>三層折扣審批制度（0–15% 自主 / 15–20% 區域經理批准 / &gt;20% VP 批准）：</strong>RICE 33,336 · 年化可挽回 +$10,416。補上 20–40% 的灰色地帶。</div></div>
-    <div class="action"><span class="action-tag p1">P1 第4–6週</span><div class="action-txt"><strong>Central 區域業務健診：</strong>RICE 8,302 · 年化可挽回 +$5,748。釐清高折扣城市根因，決定是否收回自主定價權。</div></div>
-    <div class="action"><span class="action-tag p1">P1 第4–6週</span><div class="action-txt"><strong>Tables SKU 審查，停售虧損品項：</strong>RICE 1,323 · 年化可挽回 +$3,256。成本審計 + SKU 篩選下架。</div></div>
-    <div class="action"><span class="action-tag p2">P2 Q2</span><div class="action-txt"><strong>報價工具即時顯示利潤率：</strong>RICE 32,410 · 年化可挽回 +$11,575。讓業務在報價時看到利潤後果。</div></div>
-    <div class="action"><span class="action-tag p2">P2 Q2</span><div class="action-txt"><strong>銷售 KPI 加入毛利考核（≥30%）：</strong>RICE 8,681 · 年化可挽回 +$16,205。建議先在 Central 一區試點，確認效果後全國推廣。</div></div>
-    <div class="action"><span class="action-tag p2">P3 Q3</span><div class="action-txt"><strong>South 區定價策略優化：</strong>RICE 1,540 · 年化可挽回 +$4,988。South 2026 利潤率從 2025 年的 18.9% 跌至 7.2%，有改善空間。</div></div>
+    <div class="action"><span class="action-tag p0">P0 · 第3週</span><div class="action-txt"><strong>折扣 &gt;40% 需 VP 特批（全公司）：</strong>RICE 59,476 · 年化可挽回 +$18,504。受影響虧損訂單 $26,434 × 70% 攔截率。</div></div>
+    <div class="action"><span class="action-tag p0">P0 · 第3週</span><div class="action-txt"><strong>凍結 Tables / Bookcases 折扣授權：</strong>RICE 39,868 · 年化可挽回 +$8,197。折扣節省 $16,393 × 50% 轉為實際利潤改善。</div></div>
+    <div class="action"><span class="action-tag p0">P0 · 第3週</span><div class="action-txt"><strong>三層折扣審批制度（0–15% 自主 / 15–20% 區域經理批准 / &gt;20% VP 批准）：</strong>RICE 33,336 · 年化可挽回 +$10,416。補上 20–40% 的灰色地帶。</div></div>
+    <div class="action"><span class="action-tag p1">P1 · 第4–6週</span><div class="action-txt"><strong>Central 區域業務健診：</strong>RICE 8,302 · 年化可挽回 +$5,748。釐清高折扣城市根因，決定是否收回自主定價權。</div></div>
+    <div class="action"><span class="action-tag p1">P1 · 第4–6週</span><div class="action-txt"><strong>Tables SKU 審查，停售虧損品項：</strong>RICE 1,323 · 年化可挽回 +$3,256。成本審計 + SKU 篩選下架。</div></div>
+    <div class="action"><span class="action-tag p2">P2 · 第7–10週</span><div class="action-txt"><strong>報價工具即時顯示利潤率：</strong>RICE 32,410 · 年化可挽回 +$11,575。讓業務在報價時看到利潤後果。</div></div>
+    <div class="action"><span class="action-tag p2">P2 · 第7–10週</span><div class="action-txt"><strong>銷售 KPI 加入毛利考核（≥30%）：</strong>RICE 8,681 · 年化可挽回 +$16,205。建議先在 Central 一區試點，確認效果後全國推廣。</div></div>
+    <div class="action"><span class="action-tag p2">P3 · 第11–12週</span><div class="action-txt"><strong>South 區定價策略優化：</strong>RICE 1,540 · 年化可挽回 +$4,988。South 2026 利潤率從 2025 年的 18.9% 跌至 7.2%，有改善空間。</div></div>
   </div>
 
   <p class="body" style="margin-top:20px"><strong>90 天量化目標</strong></p>
