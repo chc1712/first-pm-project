@@ -184,7 +184,7 @@ footer{padding:28px 0;border-top:1px solid var(--border);display:flex;justify-co
 <header class="page-header">
   <div class="header-tag">Product Management · Data Analysis</div>
   <h1 class="page-title">Superstore 美國市場營運分析</h1>
-  <p class="page-desc">以產品經理思維，對 $2.3M 四年美國零售交易進行深度診斷。識別三個利潤侵蝕點的根因，並提出從止血到根治的分層行動路線圖。</p>
+  <p class="page-desc">以產品經理思維，對 $2.3M 四年美國零售交易進行深度診斷。整合數據分析與組織執行兩個視角，識別三個利潤侵蝕點的推測原因，並提出從診斷確認到深度改革的分層行動路線圖。</p>
   <div class="meta-row">
     <div class="meta-item"><div class="meta-l">數據範圍</div><div class="meta-v">9,994 筆 · 2023–2026</div></div>
     <div class="meta-item"><div class="meta-l">分析區域</div><div class="meta-v">美國本土 4 大區域</div></div>
@@ -1520,14 +1520,14 @@ function updAll(){
       <tr><td>2023</td><td class="r">$484,247</td><td class="r">$49,544</td><td class="r">10.2%</td><td class="r">969</td><td class="r neg">21.2%</td><td class="r">15.8%</td></tr>
       <tr><td>2024</td><td class="r">$470,532</td><td class="r">$61,618</td><td class="r pos">13.1%</td><td class="r">1,038</td><td class="r neg">20.9%</td><td class="r">15.6%</td></tr>
       <tr><td>2025</td><td class="r">$609,206</td><td class="r">$81,795</td><td class="r pos">13.4%</td><td class="r">1,315</td><td class="r">18.9%</td><td class="r">15.5%</td></tr>
-      <tr class="warn"><td>2026</td><td class="r">$733,215</td><td class="r">$93,439</td><td class="r neg">12.7%</td><td class="r">1,687</td><td class="r neg">20.8%</td><td class="r">15.6%</td></tr>
+      <tr class="warn"><td><strong>2026</strong></td><td class="r"><strong>$733,215</strong></td><td class="r"><strong>$93,439</strong></td><td class="r neg"><strong>12.7%</strong></td><td class="r">1,687</td><td class="r neg"><strong>20.8%</strong></td><td class="r">15.6%</td></tr>
       <tr class="sum"><td>四年合計</td><td class="r">$2,297,201</td><td class="r">$286,397</td><td class="r">12.47%</td><td class="r">5,009</td><td class="r">—</td><td class="r">15.6%</td></tr>
     </tbody>
   </table>
 
   <div class="note gray">
     <div class="note-lbl">資料範圍說明</div>
-    原始資料 10,194 筆，排除加拿大 200 筆（2.0%）。四大區域（Central/East/South/West）為美國內部劃分，加拿大不隸屬其中。加拿大利潤率（20.1%）高於美國（12.47%），可作為獨立對照組另行研究。
+    原始資料 10,194 筆，排除加拿大 200 筆（2.0%）。四大區域為美國內部劃分，加拿大不隸屬其中。加拿大利潤率（20.1%）高於美國（12.47%），可作為獨立對照組另行研究。
   </div>
 </section>
 
@@ -1535,9 +1535,6 @@ function updAll(){
 <section class="section">
   <div class="sec-tag">02 · 發現問題</div>
   <h2 class="sec-title">三個結構性問題</h2>
-  <div class="body">
-    <p>分析挖出三個結構性問題，共同根源是：<strong>組織缺乏以利潤為核心的決策機制</strong>——業務、採購、區域主管都在最大化被考核的指標，而那些指標沒有把利潤包含進去。</p>
-  </div>
 
   <!-- Finding 01 -->
   <div class="finding">
@@ -1558,7 +1555,10 @@ function updAll(){
     </div>
     <div class="finding-body">
       <p>折扣超過 20% 的 1,076 筆訂單，累計造成 <strong>$115,895</strong> 的利潤損失。若對這些訂單實施折扣防護牆，預計可挽回約 <strong>$132,500</strong>。</p>
-      <p>業務人員在缺乏任何機制限制的情況下，可以對任何訂單給出任何折扣。這不是個人問題，是授權設計問題。折扣應該是戰略性的手術刀，而不是無差別的散彈槍。</p>
+    </div>
+    <div class="note red">
+      <div class="note-lbl">推測原因</div>
+      KPI 以成交量和營收為基準，業務人員沒有動機拒絕低利潤訂單。組織也沒有任何機制限制折扣授權，業務可以在不受任何干預的情況下給出 80% 折扣。但這只是基於資料的推測——在沒有訪談管理層之前，無法確認這是真正的原因。
     </div>
   </div>
 
@@ -1569,7 +1569,7 @@ function updAll(){
       <span class="finding-name">家具品類是整體利潤的拖油瓶，Tables 與 Bookcases 四年累計虧損 $21,199</span>
     </div>
     <div class="finding-body">
-      <p>三大品類中，Technology（17.40%）與 Office Supplies（17.04%）利潤率健康，但 Furniture 四年僅 2.49%。深入子品類，Tables 與 Bookcases 是主要虧損來源，兩者的平均折扣率均高於 20% 的臨界線；而 Chairs（8.11%）和 Furnishings（14.30%）仍維持正利潤——問題在特定品項，不在整個品類。</p>
+      <p>三大品類中，Technology（17.40%）與 Office Supplies（17.04%）利潤率健康，但 Furniture 四年僅 2.49%。Chairs（8.11%）和 Furnishings（14.30%）仍維持正利潤——問題在特定品項，不在整個品類。</p>
     </div>
     <table class="tbl">
       <thead><tr><th>子品類</th><th class="r">四年銷售額</th><th class="r">四年利潤</th><th class="r">利潤率</th><th class="r">平均折扣</th></tr></thead>
@@ -1581,7 +1581,11 @@ function updAll(){
       </tbody>
     </table>
     <div class="finding-body">
-      <p>Tables 連續四年虧損，2026 年虧損（−$8,141）是 2025 年（−$2,951）的 2.75 倍，惡化幅度 175%。組織沒有 SKU 層級損益可視性，決策者無法在日常工作中看到這件事。</p>
+      <p>Tables 連續四年虧損，2026 年虧損（−$8,141）是 2025 年（−$2,951）的 2.75 倍，惡化幅度 175%。</p>
+    </div>
+    <div class="note red">
+      <div class="note-lbl">推測原因</div>
+      組織可能沒有 SKU 層級的損益可視性，導致決策者在日常工作中無法即時看到「Tables 四年都在虧損」的事實。但也有另一種可能——管理層知道這件事，只是有其他考量（例如維持完整品類、搭配銷售等）而選擇維持。這是在訪談前無法判斷的部分。
     </div>
   </div>
 
@@ -1589,10 +1593,10 @@ function updAll(){
   <div class="finding">
     <div class="finding-hdr">
       <span class="finding-num">Finding 03</span>
-      <span class="finding-name">Central 區域：全美折扣最高（24.04%）、利潤率最低（7.92%）</span>
+      <span class="finding-name">Central 區域折扣最高（24.04%）、利潤率最低（7.92%），且存在城市層級的高折扣現象</span>
     </div>
     <div class="finding-body">
-      <p>West 以最低折扣率（10.93%）達到最高利潤率（14.94%），是全美清晰的標竿。Central 則完全相反。城市層級更嚴重：Abilene、Danville、Deer Park 等五個城市平均折扣高達 <strong>80%</strong>，Rockford 的 Binders 折扣 80% 導致 <strong>$1,150</strong> 單一品項損失。</p>
+      <p>West 以最低折扣率（10.93%）達到最高利潤率（14.94%），是全美清晰的標竿。Central 則完全相反。城市層級的問題更明顯：Abilene、Danville、Deer Park 等五個城市平均折扣高達 <strong>80%</strong>，Rockford 11 筆交易、Binders 折扣率 80%，單一品項造成 <strong>$1,150</strong> 虧損。</p>
     </div>
     <table class="tbl">
       <thead><tr><th>區域</th><th class="r">四年利潤</th><th class="r">利潤率</th><th class="r">平均折扣</th></tr></thead>
@@ -1607,9 +1611,10 @@ function updAll(){
     <div class="hyp">
       <div class="hyp-q">
         <span class="hyp-badge">假設驗證</span>
-        Central 是否在執行折扣換 B2B 大客戶的策略？
+        <span class="hyp-q">Central 是否在執行折扣換 B2B 大客戶的策略？</span>
       </div>
       <div class="hyp-body">
+        <p class="prose" style="font-size:13.5px;margin-bottom:12px">「折扣換大單」是真實的 B2B 策略，值得認真驗證，而不是直接否定。</p>
         <table class="tbl" style="margin-top:12px">
           <thead><tr><th>Central 訂單規模</th><th class="r">平均折扣</th><th class="r">平均每單利潤</th><th class="r">訂單數</th></tr></thead>
           <tbody>
@@ -1617,11 +1622,31 @@ function updAll(){
             <tr class="warn"><td>小單（&lt; $500）</td><td class="r neg">26.63%</td><td class="r neg">−$3</td><td class="r">892</td></tr>
           </tbody>
         </table>
-        <p style="margin-top:10px">大單反而折扣更低（18.18%）且獲利（+$150/單）；高折扣集中在小額訂單，且幾乎不賺錢（−$3/單）。複購驗證：2025 年 Central 高折扣客戶（&gt;40%）共 80 人，50% 在 2026 年仍有消費，但每筆訂單利潤僅 <strong>$22</strong>，折扣維持 27.6%，沒有收斂。</p>
         <div class="hyp-verdict">
-          <strong>結論：假設被數據否定。</strong>高折扣主要集中在小額訂單和新客獲取，不是對大客戶的戰略讓利。這是授權管理問題，不是銷售策略。
+          <strong>數據結論：</strong>「折扣換大單」假設被否定。但數據只能告訴我們「小額訂單集中了高折扣」，無法告訴我們原因是什麼。
         </div>
       </div>
+    </div>
+
+    <div class="finding-body" style="margin-top:16px">
+      <p><strong>推測原因（三種可能，需要訪談確認）：</strong></p>
+    </div>
+    <div class="rc-list">
+      <div class="rc-item">
+        <span class="rc-badge">可能 A</span>
+        <div class="rc-body"><strong>促銷活動授權：</strong>高層曾批准 Central 區的清倉特賣、周年慶或季末衝量活動，那些小額高折扣訂單是活動期間的正常交易。如果是這樣，問題不是「折扣失控」，而是「促銷活動缺乏事前損益評估機制」。</div>
+      </div>
+      <div class="rc-item">
+        <span class="rc-badge">可能 B</span>
+        <div class="rc-body"><strong>獲客策略偏差：</strong>業務用高折扣吸引新客，但缺乏後續的價值提升設計，導致客戶持續依賴折扣。新客首單折扣（26.27%）高於老客（23.97%），但 Central 新客利潤率僅 3.6%。</div>
+      </div>
+      <div class="rc-item">
+        <span class="rc-badge">可能 C</span>
+        <div class="rc-body"><strong>授權監控缺失：</strong>業務人員的折扣授權缺乏有效監控，部分城市出現「各自為政」的狀況，Binders 在 Central 的平均折扣 50.93% 即為一例。</div>
+      </div>
+    </div>
+    <div class="finding-body" style="margin-top:14px">
+      <p>這三種情境對應的解法完全不同，所以把管理層訪談列為所有行動的前置步驟——需要先確認是哪一種，才能決定後面怎麼做。</p>
     </div>
   </div>
 </section>
@@ -1629,138 +1654,111 @@ function updAll(){
 <!-- 03 ANALYSIS -->
 <section class="section">
   <div class="sec-tag">03 · 分析問題</div>
-  <h2 class="sec-title">三個症狀，一個根源</h2>
+  <h2 class="sec-title">三個症狀，一個方向</h2>
   <div class="body">
-    <p>三個發現的症狀各不相同，但共享一個根本原因：<strong>組織缺乏以利潤為核心的決策機制。</strong>深挖 Central 的高折扣行為，可以識別出三層根因——每一層需要不同性質的介入。</p>
+    <p>三個發現的症狀各不相同，資料分析指向一個共同的方向：<strong>組織目前可能缺乏以利潤為核心的決策機制。</strong>但在確認這個方向之前，需要先釐清一個關鍵問題。</p>
   </div>
 
-  <div class="rc-list">
-    <div class="rc-item">
-      <span class="rc-badge">根因 01</span>
-      <div class="rc-body">
-        <strong>獲客策略偏差：過度補貼新客戶</strong><br>
-        以折扣作為唯一的新客獲取手段，且缺乏後續的價值提升機制，導致客戶持續依賴折扣。新客首單折扣（26.27%）高於老客（23.97%），但 Central 新客利潤率僅 3.6%——這不是健康的獲客投資。
-        <span class="rc-data">Central 新客 disc 26.27% · margin 3.6% / 老客 disc 23.97% · margin 9.7%</span>
-      </div>
-    </div>
-    <div class="rc-item">
-      <span class="rc-badge">根因 02</span>
-      <div class="rc-body">
-        <strong>品類激勵錯位：低價值品類的折扣浪費</strong><br>
-        銷售人員為了達成訂單量目標，在低毛利品項給予過高折扣。Binders 在 Central 的平均折扣 50.93%，總利潤 −$1,044；Appliances 44.9%；Furnishings 40.4%。這些折扣既沒有帶來大單，也沒有帶來複購。
-        <span class="rc-data">Binders 50.93% · Appliances 44.9% · Furnishings 40.4%（均虧損）</span>
-      </div>
-    </div>
-    <div class="rc-item">
-      <span class="rc-badge">根因 03</span>
-      <div class="rc-body">
-        <strong>授權監控缺失：局部管理失控</strong><br>
-        區域管理層對折扣授權缺乏有效監控，導致部分城市出現「管理黑洞」。Abilene、Danville、Deer Park 等城市平均折扣 80%，Rockford 的 Binders 折扣 80% 導致 $1,150 單一品項損失。
-        <span class="rc-data">五個城市折扣 80% · Rockford 11 筆交易 · 虧損 $1,150</span>
-      </div>
-    </div>
+  <h3 style="font-size:15px;font-weight:600;margin:20px 0 10px">在行動之前，先確認方向</h3>
+  <div class="body">
+    <p>資料只能告訴我們「發生了什麼」，無法告訴我們「為什麼發生」。所以在提出任何行動之前，先安排 1–2 週的訪談，確認推測是否正確。</p>
   </div>
 
-  <div class="note amber">
-    <div class="note-lbl">參照基準</div>
-    West 區以 10.93% 的平均折扣做到 14.94% 的利潤率，是全美清晰的標竿。若 Central 能調整至接近 West 的折扣結構，以現有銷售規模估算，年度可額外貢獻 $35,000–$50,000。
+  <div class="body" style="margin-top:12px">
+    <p><strong>管理層訪談（3–5 天）— 核心問題：</strong></p>
+  </div>
+  <div class="action-list" style="margin-top:8px">
+    <div class="action"><span class="action-tag p1">訪談</span><div class="action-txt">Central 區的高折扣，是誰的決策？有無授權紀錄？</div></div>
+    <div class="action"><span class="action-tag p1">訪談</span><div class="action-txt">2026 年是否有辦過促銷活動、清倉特賣或周年慶？那些小額高折扣訂單是否在活動期間產生？</div></div>
+    <div class="action"><span class="action-tag p1">訪談</span><div class="action-txt">Tables 和 Bookcases 的持續虧損，管理層是否知情？若知情，背後的考量是什麼？</div></div>
+    <div class="action"><span class="action-tag p1">訪談</span><div class="action-txt">銷售 KPI 的設計初衷是什麼？現行機制是否有意包含折扣空間？</div></div>
   </div>
 
-  <div class="not-scope">
-    <div class="not-scope-title">NOT SCOPE（明確不做的事）</div>
-    <div class="ns-item"><span class="ns-x">✕</span><span>不是「砍掉 Furniture 品類」——在重新定價和 SKU 審查完成之前，這個決定的依據不足。</span></div>
-    <div class="ns-item"><span class="ns-x">✕</span><span>不是「全面禁止折扣」——折扣本身不是問題，無成本意識的折扣授權才是。</span></div>
-    <div class="ns-item"><span class="ns-x">✕</span><span>不是「換掉業務團隊」——業務在最大化被考核的指標，這是系統設計問題，不是人的問題。</span></div>
+  <div class="body" style="margin-top:16px">
+    <p><strong>客戶與業務訪談（3–5 天）— 核心問題：</strong></p>
+  </div>
+  <div class="action-list" style="margin-top:8px">
+    <div class="action"><span class="action-tag p1">訪談</span><div class="action-txt">高折扣客戶：折扣是購買決策的關鍵因素嗎？若折扣降低 10%，還會購買嗎？</div></div>
+    <div class="action"><span class="action-tag p1">訪談</span><div class="action-txt">業務人員：給高折扣的原因是什麼？是主管要求、競爭壓力、還是個人判斷？</div></div>
+  </div>
+
+  <div class="body" style="margin-top:16px">
+    <p>訪談結果對應三種情境，每種情境的行動方向不同：</p>
+  </div>
+  <table class="tbl" style="margin-top:12px">
+    <thead><tr><th>情境</th><th>訪談發現</th><th>行動方向調整</th></tr></thead>
+    <tbody>
+      <tr><td><strong>A</strong></td><td>高折扣集中在特定活動期間，為管理層批准</td><td>不是阻止折扣，而是建立促銷活動的事前損益評估機制</td></tr>
+      <tr><td><strong>B</strong></td><td>折扣是業務個人決策，KPI 以成交量為主</td><td>原 P0 方案執行，並推進 G（KPI 重設）</td></tr>
+      <tr><td><strong>C</strong></td><td>部分是活動，部分是個人決策</td><td>分開處理：活動折扣建立審核機制；個人折扣設上限</td></tr>
+    </tbody>
+  </table>
+
+  <div class="not-scope" style="margin-top:20px">
+    <div class="not-scope-title">NOT SCOPE</div>
+    <div class="ns-item"><span class="ns-x">✕</span><span>不是「砍掉 Furniture 品類」——Chairs 和 Furnishings 仍有正利潤，在 SKU 審查完成前缺乏依據</span></div>
+    <div class="ns-item"><span class="ns-x">✕</span><span>不是「全面禁止折扣」——折扣本身不是問題，0–15% 的折扣區間全部獲利</span></div>
+    <div class="ns-item"><span class="ns-x">✕</span><span>不是「換掉業務團隊」——業務在最大化被考核的指標，這是系統設計問題，不是人的問題</span></div>
   </div>
 </section>
 
 <!-- 04 SOLUTION -->
 <section class="section">
-  <div class="sec-tag">04 · 戰略行動路線圖</div>
-  <h2 class="sec-title">RICE 框架排序</h2>
+  <div class="sec-tag">04 · Solution</div>
+  <h2 class="sec-title">Solution</h2>
   <div class="body">
-    <p>行動從止血到根治分四個層次，依 RICE 框架（Reach × Impact × Confidence ÷ Effort）排序。P0 兩項無需開發預算，今天可以用政策宣示實施。</p>
+    <p>行動分四個優先層次，依 RICE 框架（Reach × Impact × Confidence ÷ Effort）排序。Reach 統一定義為「受影響訂單的利潤缺口（$）」，所有行動使用相同單位可直接比較。</p>
   </div>
 
-  <div class="actions">
-    <div class="action">
-      <span class="p-tag p0">P0 本週</span>
-      <div class="action-txt">
-        <strong>Central 區精準清理小額高折扣訂單：</strong>銷售額低於 $200 的訂單，折扣上限 10%；任何折扣超過 40% 需區域總經理特批。優先清查 Rockford、Abilene、Danville 等高異常城市。
-        <div class="action-note">預計 60 天內挽回 $36,000–$40,000 利潤，作為全公司折扣策略改革的試點。</div>
-      </div>
-    </div>
-    <div class="action">
-      <span class="p-tag p0">P0 本週</span>
-      <div class="action-txt">
-        <strong>凍結 Tables / Bookcases 折扣授權：</strong>本身已虧損的品項停止任何促銷折扣授權，需 VP 特批並提供業務理由。
-      </div>
-    </div>
-    <div class="action">
-      <span class="p-tag p1">P1 30天</span>
-      <div class="action-txt">
-        <strong>家具品類利潤修復（Furniture Profit Recovery Initiative）：</strong>全面審計 Tables 和 Bookcases 的採購、物流成本，依成本結構重新定價；縮減或淘汰持續虧損 SKU，釋放資源給高利潤品項。
-        <div class="action-note">目標：90 天內將 Furniture 整體利潤率從 2.49% 提升至 5% 以上。</div>
-      </div>
-    </div>
-    <div class="action">
-      <span class="p-tag p1">P1 30天</span>
-      <div class="action-txt">
-        <strong>Central 區域業務健診（Regional Business Review）：</strong>調查高折扣城市的個案，釐清是個人授權濫用還是競爭環境因素，決定是否收回自主定價權。
-      </div>
-    </div>
-    <div class="action">
-      <span class="p-tag p2">P2 Q2</span>
-      <div class="action-txt">
-        <strong>新客戶價值提升計畫（LTV Boost）：</strong>將首單折扣上限設為 20%；節省的折扣資源轉化為「第二次購買」積分或優惠券，引導客戶建立複購習慣而非折扣依賴。
-        <div class="action-note">目標：120 天內提升新客第二次購買率 10%，並降低續單平均折扣率。</div>
-      </div>
-    </div>
-    <div class="action">
-      <span class="p-tag p2">P2 Q2</span>
-      <div class="action-txt">
-        <strong>銷售 KPI 重設：</strong>將毛利貢獻額納入考核，權重不低於 30%；報價工具即時顯示預估利潤率。
-      </div>
-    </div>
-    <div class="action">
-      <span class="p-tag p2">P2 Q3</span>
-      <div class="action-txt">
-        <strong>品類折扣硬上限與全國標準化：</strong>Binders（≤15%）、Appliances（≤20%）等品類設定折扣硬上限；建立區域利潤率 KPI 門檻（季度 &lt;10% 觸發 Review）；以 West 區為標竿推動全國政策統一。
-      </div>
-    </div>
+  <div class="note amber" style="margin-top:16px">
+    <div class="note-lbl">前置作業（第 1–2 週）</div>
+    進行管理層 + 客戶 + 業務訪談，確認 Finding 03 的三種可能情境，決定後續行動方向。若訪談確認為情境 A（促銷活動），P0 行動的設計需要對應調整。
   </div>
 
-  <h3 style="font-size:15px;font-weight:600;margin:28px 0 12px">90 天量化目標</h3>
+  <div class="action-list" style="margin-top:20px">
+    <div class="action"><span class="action-tag p0">P0 第3週</span><div class="action-txt"><strong>折扣 &gt;40% 需 VP 特批（全公司）：</strong>RICE 59,476 · 年化可挽回 +$18,504。受影響虧損訂單 $26,434 × 70% 攔截率。</div></div>
+    <div class="action"><span class="action-tag p0">P0 第3週</span><div class="action-txt"><strong>凍結 Tables / Bookcases 折扣授權：</strong>RICE 39,868 · 年化可挽回 +$8,197。折扣節省 $16,393 × 50% 轉為實際利潤改善。</div></div>
+    <div class="action"><span class="action-tag p0">P0 第3週</span><div class="action-txt"><strong>三層折扣審批制度（0–15% 自主 / 15–20% 區域經理批准 / &gt;20% VP 批准）：</strong>RICE 33,336 · 年化可挽回 +$10,416。補上 20–40% 的灰色地帶。</div></div>
+    <div class="action"><span class="action-tag p1">P1 第4–6週</span><div class="action-txt"><strong>Central 區域業務健診：</strong>RICE 8,302 · 年化可挽回 +$5,748。釐清高折扣城市根因，決定是否收回自主定價權。</div></div>
+    <div class="action"><span class="action-tag p1">P1 第4–6週</span><div class="action-txt"><strong>Tables SKU 審查，停售虧損品項：</strong>RICE 1,323 · 年化可挽回 +$3,256。成本審計 + SKU 篩選下架。</div></div>
+    <div class="action"><span class="action-tag p2">P2 Q2</span><div class="action-txt"><strong>報價工具即時顯示利潤率：</strong>RICE 32,410 · 年化可挽回 +$11,575。讓業務在報價時看到利潤後果。</div></div>
+    <div class="action"><span class="action-tag p2">P2 Q2</span><div class="action-txt"><strong>銷售 KPI 加入毛利考核（≥30%）：</strong>RICE 8,681 · 年化可挽回 +$16,205。建議先在 Central 一區試點，確認效果後全國推廣。</div></div>
+    <div class="action"><span class="action-tag p2">P3 Q3</span><div class="action-txt"><strong>South 區定價策略優化：</strong>RICE 1,540 · 年化可挽回 +$4,988。South 2026 利潤率從 2025 年的 18.9% 跌至 7.2%，有改善空間。</div></div>
+  </div>
+
+  <p class="body" style="margin-top:20px"><strong>90 天量化目標</strong></p>
   <div class="m-grid">
     <div class="m-card">
       <div class="m-card-title">利潤健康</div>
-      <div class="m-row"><span class="m-label">全公司年度利潤率</span><span class="m-val pos">12.7% → ≥14%</span></div>
-      <div class="m-row"><span class="m-label">虧損訂單佔比</span><span class="m-val pos">20.8% → &lt;16%</span></div>
-      <div class="m-row"><span class="m-label">Furniture 利潤率</span><span class="m-val pos">2.49% → ≥5%</span></div>
-      <div class="m-row"><span class="m-label">Tables 年度虧損</span><span class="m-val pos">$8,141 → &lt;$3,000</span></div>
+      <div class="mrow"><span class="mrow-label">全公司利潤率</span><span class="mrow-val pos">12.7% → ≥14%</span></div>
+      <div class="mrow"><span class="mrow-label">虧損訂單佔比</span><span class="mrow-val pos">21.5% → &lt;10%</span></div>
+      <div class="mrow"><span class="mrow-label">Tables 年度虧損</span><span class="mrow-val pos">$8,141 → &lt;$3,000</span></div>
     </div>
     <div class="m-card">
       <div class="m-card-title">折扣治理</div>
-      <div class="m-row"><span class="m-label">Central 年度利潤率</span><span class="m-val pos">7.92% → ≥9%</span></div>
-      <div class="m-row"><span class="m-label">Central 平均折扣</span><span class="m-val pos">24.04% → &lt;18%</span></div>
-      <div class="m-row"><span class="m-label">&gt;20% 折扣訂單佔比</span><span class="m-val pos">21.5% → &lt;10%</span></div>
-      <div class="m-row"><span class="m-label">銷售 KPI 含利潤指標</span><span class="m-val pos">0% → 100%</span></div>
+      <div class="mrow"><span class="mrow-label">Central 年度利潤率</span><span class="mrow-val pos">5.1% → ≥9%</span></div>
+      <div class="mrow"><span class="mrow-label">折扣 &gt;20% 訂單佔比</span><span class="mrow-val pos">21.5% → &lt;10%</span></div>
+      <div class="mrow"><span class="mrow-label">KPI 含利潤指標</span><span class="mrow-val pos">0% → Central 試點 100%</span></div>
     </div>
+  </div>
+
+  <div class="note" style="margin-top:16px">
+    <div class="note-lbl">年化總計（保守）</div>
+    P0 +$37,117 · P1 +$9,004 · P2 +$27,780 · P3 +$4,988 = <strong>+$86,665</strong>。所有數字均可從原始 9,994 筆交易資料直接驗算。
   </div>
 </section>
 
 <!-- 05 REFLECTION -->
 <section class="section">
-  <div class="sec-tag">05 · 個人反思與學習心得</div>
+  <div class="sec-tag">05 · 反思</div>
   <h2 class="sec-title">反思</h2>
   <div class="body">
-    <p>這次的專案中，我覺得有兩個值得記錄的方法論時刻。</p>
-    <p>第一，是假設驗證的重要性。在看到 Central 的高折扣和低利潤率並存時，直觀的猜測是「業務在用折扣換大單」。但把這個假設拿去驗證後，數據清楚顯示：Central 的大單（≥$500）折扣反而更低（18.18% vs 26.63%），且獲利顯著（+$150/單）；高折扣集中在小額訂單，不是在對大客戶讓利。如果跳過驗證直接建議「讓折扣策略更精準」，會完全走錯方向。</p>
-    <p>第二，是根本原因存在著三層結構。折扣失控表面上看是執行問題，但深挖後發現它同時反映了三個不同層次的問題：獲客策略（新客折扣過高）、品類激勵（低價品項折扣浪費）、授權監控（城市層級管理黑洞）。這三個問題狀況需要三種不同性質的介入，不能用一個政策解決。</p>
+    <p>這個分析有兩個值得記錄的方法論時刻。</p>
+    <p>第一是假設驗證的重要性。在看到 Central 的高折扣和低利潤率並存時，直觀的猜測是「業務在用折扣換大單」。但把這個假設拿去驗證後，數據清楚顯示：Central 的大單（≥$500）折扣反而更低（18.18% vs 26.63%），且獲利顯著（+$150/單）；高折扣集中在小額訂單，不是在對大客戶讓利。如果跳過驗證直接建議「讓折扣策略更精準」，會完全走錯方向。</p>
+    <p>第二是根本原因存在著三層結構。折扣失控表面上看是執行問題，但深挖後發現它同時反映了三個不同層次的問題：獲客策略（新客折扣過高）、品類激勵（低價品項折扣浪費）、授權監控（城市層級管理黑洞）。這三個問題狀況需要三種不同性質的介入，不能用一個政策解決。</p>
   </div>
-
-
 </section>
+
 
 <footer>
   <span>Superstore US Market · FY2023–2026 · 9,994 筆交易</span>
